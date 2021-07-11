@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger {
+    margin: 20px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.icon-up {
+    font-weight: 600;
+    color: #333333;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.up-name {
+    font-weight: 600;
+    color: #333333;
+    font-size: 16px;
+}
+
+.cta-editar {
+    width: 90%;
+    margin-left: 5%;
+    background-color: #ffffff;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.flex-center {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container {
+    margin: 40px 0;
+}
+
+.bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+}
+
+.title-logs {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.logs {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 5px;
+}

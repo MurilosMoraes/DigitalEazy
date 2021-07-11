@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.hamburger {
+  margin: 20px;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.container-infos {
+  margin-top: 10px;
+  background-color: #ffffff;
+  height: 70px;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 10px;
+}
+
+.saldo {
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.valor {
+  font-size: 22px;
+  text-align: center;
+  color: #ab00ff;
+  font-weight: 700;
+}
+
+.chart {
+  margin: 100px 0;
+  font-size: 22px;
+  text-align: center;
+  color: #ab00ff;
+  font-weight: 500;
+}
+
+.btn-ativo {
+  padding: 10px;
+  margin-top: 10px;
+  width: 90%;
+  margin-left: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: #333333;
+}
+
+.flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.infos-card {
+  vertical-align: top;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.data {
+  color: #333333;
+  font-size: 12px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.pontos {
+  color: #ab00ff;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.flex-tab{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: scroll ;
+  margin: 20px;
+}
+
+.flex-periodo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: scroll ;
+  margin: 20px;
+}
+
+.periodo{
+    margin: 0 5px;
+    font-weight: 300;  
+}
+
+.periodo-selecionado{
+  background-color: #ab00ff;
+  border-radius: 100px;
+  padding:2px 5px;
+}
+
+.nomes-tabs{
+  margin: 0 5px;
+  font-weight: 300;
+}
+
+.nomes-tabs-select{
+  margin: 0 5px;
+  font-weight: 500;
+}
+
+.container-lado{
+  margin-top: 14px;
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333333;
+}
+
+.btns-lado{
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 48%;
+}
+
+.icon{
+  font-size: 24px;
+  color: #c0c0c0;
+}
+.btns-lado p{
+  margin-top: 7px;
+  font-size: 14px;
+}

@@ -1,0 +1,119 @@
+<ion-content>
+  <div *ngIf="infos">
+    <div class="flex-header">
+      <ion-icon [routerLink]="['/home']" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <h1 class="title">
+        Digite os dados para a sua recarga
+      </h1>
+    </div>
+
+    <div class="container-inputs">
+      <div class="label">
+        <p>
+          Escolha a operadora
+        </p>
+        <ion-select>
+          <ion-select-option value="f">option 1</ion-select-option>
+          <ion-select-option value="m">option 2</ion-select-option>
+        </ion-select>
+      </div>
+
+      <div class="label">
+        <p>
+          Escolha o valor
+        </p>
+        <ion-select>
+          <ion-select-option value="f">option 1</ion-select-option>
+          <ion-select-option value="m">option 2</ion-select-option>
+        </ion-select>
+      </div>
+
+
+      <div class="label">
+        <p>
+          Digite o número
+        </p>
+        <ion-input placeholder="(00) 00000-0000">
+
+        </ion-input>
+      </div>
+
+      <div class="label">
+        <p>
+          Confirme o número
+        </p>
+        <ion-input placeholder="(00) 00000-0000"></ion-input>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="cta-dados" (click)="openComprovante()">
+        <p>
+          Recarregar
+        </p>
+        <ion-icon style="margin-top: 2px; margin-left: 5px;" name="arrow-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPROVANTE -->
+  <div *ngIf="comprovante">
+    <div class="flex">
+      <ion-buttons>
+        <ion-menu-button class="hamburger" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+      <ion-icon class="share" name="share-social"></ion-icon>
+    </div>
+
+    <div class="card-branco">
+      <p class="title-comprovante">
+        Comprovante de Transação
+      </p>
+
+      <div id="container-comprovante">
+        <p class="title-infos-comprovante">
+          Valor
+        </p>
+        <p class="infos-comprovante">
+          R$13,00
+        </p>
+
+        <p class="title-infos-comprovante">
+          Data da Recarga
+        </p>
+        <p class="infos-comprovante">
+          15/01/2021
+        </p>
+
+        <p class="title-infos-comprovante">
+          Operadora
+        </p>
+        <p class="infos-comprovante">
+          VIVO SP
+        </p>
+
+        <p class="title-infos-comprovante">
+          Número
+        </p>
+        <p class="infos-comprovante">
+          (00)00000-0000
+        </p>
+
+        <p class="title-infos-comprovante">
+          Código de autenticação
+        </p>
+        <p class="infos-comprovante">
+          a5sf87s84sw4f5df9s
+        </p>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

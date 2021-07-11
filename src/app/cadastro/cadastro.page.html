@@ -1,0 +1,300 @@
+<ion-content>
+  <!-- LOBBY CADASTRO -->
+  <div class="overlay" *ngIf="lobby">
+    <div class="container">
+      <div>
+        <ion-icon [routerLink]="['/lobby']" class="arrow-left" name="arrow-back-outline"></ion-icon>
+        <h1 class="title">
+          Faça seu cadastro
+        </h1>
+        <p class="sub">
+          Para prosseguir com seu cadastro, tenha seu CPF e documento com foto em mãos
+        </p>
+      </div>
+      <div>
+        <img class="img" src="../../assets/cadastro.svg" alt="">
+      </div>
+    </div>
+    <div class="bottom-lobby">
+      <div (click)="openCpf()" class="cta-branco">
+        Possuo meu documento, prosseguir
+      </div>
+      <div [routerLink]="['/lobby']" class="cta-cinza">
+        Agora não, cadastrar-me mais tarde
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" *ngIf="cpf">
+    <div class="container">
+      <ion-icon (click)="openLobby()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <div>
+        <h1 class="title">
+          Faça seu cadastro
+        </h1>
+        <p class="sub">
+          Preencha as informações abaixo para dar continuidade em seu cadastro
+        </p>
+      </div>
+      <div>
+        <p style="margin-top:30px;" class="label">
+          CPF
+        </p>
+        <ion-input></ion-input>
+      </div>
+      <div class="flex">
+        <div>
+          <ion-checkbox></ion-checkbox>
+        </div>
+        <div>
+          <p class="termos">
+            Eu aceito os <span>Termos de uso e privacidade</span>
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="bottom">
+      <div (click)="openEmail()" class="cta-branco-flex">
+        <div>
+          Avançar
+        </div>
+        <div>
+          <ion-icon style="margin-left: 5px; font-size: 12px;" name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+      <div [routerLink]="['/lobby']" class="cta-cinza-flex">
+        Terminar Depois
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN EMAIL -->
+
+  <div class="overlay" *ngIf="email">
+    <div class="container">
+      <ion-icon (click)="openCpf()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <div>
+        <h1 class="title">
+          Informações de contato
+        </h1>
+        <p class="sub">
+          Preencha as informações abaixo para dar continuidade em seu cadastro
+        </p>
+      </div>
+      <div>
+        <p style="margin-top:30px;" class="label">
+          E-mail
+        </p>
+        <ion-input></ion-input>
+      </div>
+
+      <div>
+        <p class="label">
+          Telefone
+        </p>
+        <ion-input></ion-input>
+      </div>
+    </div>
+    <div class="bottom">
+      <div (click)="openEndereco()" class="cta-branco-width">
+        <div>
+          Avançar
+        </div>
+        <div>
+          <ion-icon style="margin-left: 5px; font-size: 12px;" name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN ENDEREÇO -->
+
+  <div class="overlay" *ngIf="endereco">
+    <div class="container">
+      <ion-icon (click)="openEmail()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <div>
+        <h1 class="title">
+          Outras informações
+        </h1>
+        <p class="sub">
+          Preencha as informações abaixo para dar continuidade em seu cadastro
+        </p>
+      </div>
+      <div>
+        <p style="margin-top:30px;" class="label">
+          CEP
+        </p>
+        <ion-input></ion-input>
+      </div>
+      <div>
+        <p class="label">
+          Endereço
+        </p>
+        <ion-input></ion-input>
+      </div>
+      <div>
+        <p class="label">
+          Número
+        </p>
+        <ion-input></ion-input>
+      </div>
+      <div>
+        <p class="label">
+          Complemento
+        </p>
+        <ion-input></ion-input>
+      </div>
+
+    </div>
+    <div class="bottom">
+      <div (click)="openSenha()" class="cta-branco-flex">
+        <div>
+          Avançar
+        </div>
+        <div>
+          <ion-icon style="margin-left: 5px; font-size: 12px;" name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+      <div [routerLink]="['/lobby']" class="cta-cinza-flex">
+        Preencher Depois
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN SENHA -->
+
+  <div class="overlay" *ngIf="senha">
+    <div class="container">
+      <ion-icon (click)="openEndereco()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <div>
+        <h1 class="title">
+          Crie sua senha
+        </h1>
+        <p class="sub">
+          Crie uma senha segura para acessar sua conta Digital Eazy
+        </p>
+      </div>
+      <div>
+        <p style="margin-top:30px;" class="label">
+          Crie sua senha
+        </p>
+        <ion-input></ion-input>
+      </div>
+      <div>
+        <p class="label">
+          Confirme a senha
+        </p>
+        <ion-input></ion-input>
+      </div>
+    </div>
+    <div class="bottom">
+      <div (click)="openDocFrente()" class="cta-branco-width">
+        <div>
+          Avançar
+        </div>
+        <div>
+          <ion-icon style="margin-left: 5px; font-size: 12px;" name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN DOCUMENTO FRENTE -->
+
+  <div class="overlay" *ngIf="docFrente">
+    <div class="container">
+      <ion-icon (click)="openSenha()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <div>
+        <h1 class="title">
+          Documentação Pessoal
+        </h1>
+        <p class="sub">
+          Faça upload de uma foto legível do seu documento com foto
+        </p>
+      </div>
+      <div>
+        <p style="margin-top:30px;" class="label">
+          Tire uma foto da frente do seu documento
+        </p>
+        <div class="cta-cam">
+          <ion-icon class="cam" name="camera"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div (click)="openDocVerso()" class="cta-branco-width">
+        <div>
+          Avançar
+        </div>
+        <div>
+          <ion-icon style="margin-left: 5px; font-size: 12px;" name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN DOCUMENTO VERSO -->
+
+  <div class="overlay" *ngIf="docVerso">
+    <div class="container">
+      <ion-icon (click)="openDocFrente()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <div>
+        <h1 class="title">
+          Documentação Pessoal
+        </h1>
+        <p class="sub">
+          Faça upload de uma foto legível do seu documento com foto
+        </p>
+      </div>
+      <div>
+        <p style="margin-top:30px;" class="label">
+          Tire uma foto do verso do seu documento
+        </p>
+        <div class="cta-cam">
+          <ion-icon class="cam" name="camera"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div (click)="openFacematch()" class="cta-branco-width">
+        <div>
+          Avançar
+        </div>
+        <div>
+          <ion-icon style="margin-left: 5px; font-size: 12px;" name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN FACEMATCH -->
+
+  <div class="overlay" *ngIf="facematch">
+    <div class="container">
+      <ion-icon (click)="openDocVerso()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <div>
+        <h1 class="title">
+          Facematch
+        </h1>
+        <p class="sub">
+          Faremos uma verificação facial com o seu documento
+        </p>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="cta-branco-width">
+        <div>
+          <ion-icon class="cam-btn" name="camera"></ion-icon>
+        </div>
+        <div [routerLink]="['/login']">
+          Tirar minha foto
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

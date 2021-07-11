@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ion-content {
+    --background: url("../../assets/bg-login.jpg") no-repeat center center / cover;
+}
+
+.overlay{
+    position: absolute;
+    background-color: #00000070;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    position: relative;
+    margin: 0 20px;
+}
+
+.title {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.sub {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.label {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+ion-input {
+    margin-top: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    height: 40px;
+    color: #333333;
+    padding: 0 5px !important;
+}
+
+.bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-branco-width {
+    color: #333333;
+    background-color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+.cadastre-se{
+    font-size: 16px;
+    color:#ffffff;
+    text-align: center;
+    position: absolute;
+    bottom:20px;
+    width: 100%;
+    text-align: center;
+}

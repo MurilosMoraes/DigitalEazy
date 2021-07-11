@@ -1,0 +1,300 @@
+<ion-content>
+    <ion-buttons>
+        <ion-menu-button class="hamburger" menu="main-menu">
+        </ion-menu-button>
+    </ion-buttons>
+
+    <div style="margin: 20px;">
+        <h1 class="saldo">
+            Saldo Atual
+        </h1>
+        <p class="valor">
+            R$2.700,00
+        </p>
+
+        <div class="chart">
+            Chart.JS aqui
+        </div>
+    </div>
+
+
+    <div *ngIf="extrato">
+        <div class="flex-tab">
+            <div (click)="openExtrato()" class="nomes-tabs-select">
+                Extrato
+            </div>
+            <div (click)="openTransacoes()" class="nomes-tabs">
+                Transações
+            </div>
+            <div (click)="openCobranca()" class="nomes-tabs">
+                Cobrança
+            </div>
+            <div (click)="openCorrespondente()" class="nomes-tabs">
+                Correspondente
+            </div>
+        </div>
+
+        <div class="flex-periodo">
+            <div class="periodo-selecionado">
+                Diário
+            </div>
+            <div class="periodo">
+                Semanal
+            </div>
+            <div class="periodo">
+                Mensal
+            </div>
+            <div class="periodo">
+                Trimestral
+            </div>
+        </div>
+        <div class="container-bottom">
+            <div class="btn-ativo">
+                <div class="flex-start">
+                    <div>
+                        <img src="../../assets/icones/share-illustration.svg" alt="">
+                    </div>
+                    <div class="infos-card">
+                        <p>
+                            Supermercado
+                        </p>
+                        <p class="data">
+                            05/01/2020
+                        </p>
+                    </div>
+                </div>
+                <div class="pontos">
+                    -R$88,90
+                </div>
+            </div>
+
+            <div class="btn-ativo">
+                <div class="flex-start">
+                    <div>
+                        <img src="../../assets/icones/share-illustration.svg" alt="">
+                    </div>
+                    <div class="infos-card">
+                        <p>
+                            Rei do Mate
+                        </p>
+                        <p class="data">
+                            05/01/2020
+                        </p>
+                    </div>
+                </div>
+                <div class="pontos">
+                    -R$27,50
+                </div>
+            </div>
+
+            <div class="btn-ativo">
+                <div class="flex-start">
+                    <div>
+                        <img src="../../assets/icones/share-illustration.svg" alt="">
+                    </div>
+                    <div class="infos-card">
+                        <p>
+                            Smart Fit
+                        </p>
+                        <p class="data">
+                            05/01/2020
+                        </p>
+                    </div>
+                </div>
+                <div class="pontos">
+                    -R$139,90
+                </div>
+            </div>
+
+            <div class="btn-ativo">
+                <div class="flex-start">
+                    <div>
+                        <img src="../../assets/icones/share-illustration.svg" alt="">
+                    </div>
+                    <div class="infos-card">
+                        <p>
+                            Smart Fit
+                        </p>
+                        <p class="data">
+                            05/01/2020
+                        </p>
+                    </div>
+                </div>
+                <div class="pontos">
+                    -R$139,90
+                </div>
+            </div>
+            <div class="btn-ativo">
+                <div class="flex-start">
+                    <div>
+                        <img src="../../assets/icones/share-illustration.svg" alt="">
+                    </div>
+                    <div class="infos-card">
+                        <p>
+                            Smart Fit
+                        </p>
+                        <p class="data">
+                            05/01/2020
+                        </p>
+                    </div>
+                </div>
+                <div class="pontos">
+                    -R$139,90
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="transacoes">
+        <div class="flex-tab">
+            <div (click)="openExtrato()" class="nomes-tabs">
+                Extrato
+            </div>
+            <div (click)="openTransacoes()" class="nomes-tabs-select">
+                Transações
+            </div>
+            <div (click)="openCobranca()" class="nomes-tabs">
+                Cobrança
+            </div>
+            <div (click)="openCorrespondente()" class="nomes-tabs">
+                Correspondente
+            </div>
+        </div>
+        <div class="container-lado">
+            <div [routerLink]="['/pagar-contas']" class="btns-lado">
+                <img src="../../assets/icones/barcode-icon.svg" alt="">
+                <p>
+                    Pagar conta
+                </p>
+            </div>
+            <div [routerLink]="['/deposito']" class="btns-lado">
+                <img src="../../assets/icones/cash-icon.svg" alt="">
+                <p>
+                    Depósito
+                </p>
+            </div>
+        </div>
+        <div class="container-lado">
+            <div [routerLink]="['/recarga']" class="btns-lado">
+                <img src="../../assets/icones/mobile-icon.svg" alt="">
+                <p>
+                    Racarga
+                </p>
+            </div>
+            <div [routerLink]="['/ted']" class="btns-lado">
+                <img src="../../assets/icones/ted-icon.svg" alt="">
+                <p>
+                    TED
+                </p>
+            </div>
+        </div>
+        <div class="container-lado">
+            <div [routerLink]="['/transferencia-eazy']" class="btns-lado">
+                <img src="../../assets/icones/transfereazy-icon.svg" alt="">
+                <p>
+                    Transferência Eazy
+                </p>
+
+            </div>
+            <div [routerLink]="['/perfil']" class="btns-lado">
+                <ion-icon class="icon" name="person-outline"></ion-icon>
+                <p>
+                    Perfil
+                </p>
+            </div>
+        </div>
+        <div style="margin-bottom: 20px;" class="container-lado">
+            <div [routerLink]="['/rewards']" class="btns-lado">
+                <img src="../../assets/icones/award-icon.svg" alt="">
+                <p>
+                    Rewards
+                </p>
+            </div>
+            <div [routerLink]="['/sair']" class="btns-lado">
+                <img src="../../assets/icones/logout-icon.svg" alt="">
+                <p>
+                    Sair
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div *ngIf="cobranca">
+        <div class="flex-tab">
+            <div (click)="openExtrato()" class="nomes-tabs">
+                Extrato
+            </div>
+            <div (click)="openTransacoes()" class="nomes-tabs">
+                Transações
+            </div>
+            <div (click)="openCobranca()" class="nomes-tabs-select">
+                Cobrança
+            </div>
+            <div (click)="openCorrespondente()" class="nomes-tabs">
+                Correspondente
+            </div>
+        </div>
+
+        <div class="container-lado">
+            <div [routerLink]="['/home']" class="btns-lado">
+                <P>
+                    Gerar Boleto
+                </P>
+            </div>
+            <div [routerLink]="['/home']" class="btns-lado">
+                <P>
+                    Venda Digitada
+                </P>
+            </div>
+        </div>
+        <div style="margin-bottom: 20px;" class="container-lado">
+            <div [routerLink]="['/home']" class="btns-lado">
+                <P>
+                    Link de Pagamento
+                </P>
+            </div>
+            <div class="btns-lado">
+                <P>
+                    Pix
+                </P>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="correspondente">
+        <div class="flex-tab">
+            <div (click)="openExtrato()" class="nomes-tabs">
+                Extrato
+            </div>
+            <div (click)="openTransacoes()" class="nomes-tabs">
+                Transações
+            </div>
+            <div (click)="openCobranca()" class="nomes-tabs">
+                Cobrança
+            </div>
+            <div (click)="openCorrespondente()" class="nomes-tabs-select">
+                Correspondente
+            </div>
+        </div>
+
+        <div class="container-lado">
+            <div [routerLink]="['/home']" class="btns-lado">
+                <P>
+                    Saque
+                </P>
+            </div>
+            <div [routerLink]="['/recarga']" class="btns-lado">
+                <P>
+                    Recarga
+                </P>
+            </div>
+        </div>
+        <div style="margin-bottom: 20px;" class="container-lado">
+            <div [routerLink]="['/deposito']" class="btns-lado">
+                <P>
+                    Depósito
+                </P>
+            </div>
+
+        </div>
+    </div>
+
+</ion-content>

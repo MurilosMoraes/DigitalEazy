@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-header {
+    margin-right: 10px;
+    margin-left: 20px;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.arrow-left {
+    font-size: 24px;
+}
+
+.hamburger-flex {
+    margin: 20px 10px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.hamburger {
+    margin: 20px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.nome {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.container-lobby {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 15px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nome-cta {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 5px;
+    color: #333333;
+}
+
+.icon-cta {
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    color: #333333;
+}
+
+.label {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+ion-input {
+    padding: 20px;
+    border-bottom: 2px solid #ffffff;
+    height: 40px;
+}
+
+.perfil {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: 20px;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.icon-up {
+    color: #333333;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.up-name {
+    color: #333333;
+    font-size: 16px;
+}
+
+.bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+}
+
+.cta-editar {
+    width: 90%;
+    margin-left: 5%;
+    background-color: #ffffff;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.title-config {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+}
+
+ion-toggle {
+    --background: #c0c0c0;
+    --background-checked: #c0c0c0;
+    --handle-width: 15px;
+    --handle-background-checked: #232528;
+    height: 20px;
+    width: 40px;
+}
+.container-config {
+    margin: 40px 20px;
+}
+
+.name-config {
+    margin-left: 10px;
+}
+
+.flex-config {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

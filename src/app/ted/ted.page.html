@@ -1,0 +1,217 @@
+<ion-content>
+  <div *ngIf="dados">
+    <div class="flex-header">
+      <ion-icon [routerLink]="['/home']" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <h1 class="title">
+        TED
+      </h1>
+    </div>
+
+    <div class="container-inputs">
+
+      <div class="label">
+        <p>
+          Banco de Destino
+        </p>
+        <ion-select>
+          <ion-select-option value="f">option 1</ion-select-option>
+          <ion-select-option value="m">option 2</ion-select-option>
+        </ion-select>
+      </div>
+
+
+      <div class="label">
+        <p>
+          Agência
+        </p>
+        <ion-input placeholder="00000">
+
+        </ion-input>
+      </div>
+
+      <div class="label">
+        <p>
+          Conta
+        </p>
+        <ion-input placeholder="0000000-0"></ion-input>
+      </div>
+
+      <div class="label">
+        <p>
+          CPF do Destinatário
+        </p>
+        <ion-input placeholder="000.000.000-00"></ion-input>
+      </div>
+
+      <div class="flex-check">
+        <ion-checkbox></ion-checkbox>
+        <p style="margin-left: 5px;">Mesma Titularidade</p>
+      </div>
+
+      <div class="label">
+        <p>
+          Valor da Transferência
+        </p>
+        <ion-input placeholder="R$400,00"></ion-input>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="cta-dados" (click)="openConfirme()">
+        <p>
+          Transferir
+        </p>
+        <ion-icon style="margin-top: 2px; margin-left: 5px;" name="arrow-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRME -->
+
+  <div *ngIf="confirme">
+    <div class="flex-header">
+      <ion-icon (click)="openDados()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <h1 class="title">
+        Confirme os dados <br>
+        para transferência
+      </h1>
+    </div>
+
+    <div class="container-confirme">
+      <div>
+        <p class="title-infos">
+          Banco de Destino
+        </p>
+        <p class="infos">
+          237 - BRADESCO
+        </p>
+      </div>
+      <div>
+        <p class="title-infos">
+          Agência e conta
+        </p>
+        <p class="infos">
+          000000 | 0000000-0
+        </p>
+      </div>
+      <div>
+        <p class="title-infos">
+          Destinatário
+        </p>
+        <p class="infos">
+          000.000.000-00
+        </p>
+        <p class="infos">
+          João Marcos Becker
+        </p>
+      </div>
+      <div>
+        <p class="title-infos">
+          Transferindo
+        </p>
+        <p class="infos">
+          R$400,00
+        </p>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div (click)="openComprovante()" class="cta-dados">
+        <p>
+          Transferir
+        </p>
+        <ion-icon style="margin-top: 2px; margin-left: 5px;" name="arrow-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPROVANTE -->
+
+  <div *ngIf="comprovante">
+    <div class="flex">
+      <ion-buttons>
+        <ion-menu-button class="hamburger" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+      <ion-icon class="share" name="share-social"></ion-icon>
+    </div>
+
+    <div class="card-branco">
+      <p class="title-comprovante">
+        Comprovante de Transação
+      </p>
+
+      <div id="container-comprovante">
+        <div>
+          <p class="title-infos-comprovante">
+            Origem
+          </p>
+          <p class="infos-comprovante">
+            JOAQUIM DOS SANTOS
+          </p>
+        </div>
+        <div>
+          <p class="title-infos-comprovante">
+            Transferindo em
+          </p>
+          <p class="infos-comprovante">
+            15/01/2021 às 15:32
+          </p>
+        </div>
+        <div>
+          <p class="title-infos-comprovante">
+            Destinatário
+          </p>
+          <p class="infos-comprovante">
+            000.000.000-00
+          </p>
+          <p class="infos-comprovante">
+            JOÃO MARCOS BECKER
+          </p>
+        </div>
+        <div>
+          <p class="title-infos-comprovante">
+            Banco de destino
+          </p>
+          <p class="infos-comprovante">
+            000 - BRADESCO
+          </p>
+          <p class="infos-comprovante">
+            0000-0
+          </p>
+          <p class="infos-comprovante">
+            000000-0
+          </p>
+        </div>
+        <div>
+          <p class="title-infos-comprovante">
+            Transferindo
+          </p>
+          <p class="infos-comprovante">
+            R$400,00
+          </p>
+
+          <p class="title-infos-comprovante">
+            Código de autenticação
+          </p>
+          <p class="infos-comprovante">
+            a5sf87s84sw4f5df9s
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,142 @@
+<ion-content>
+
+  <!-- LOBBY -->
+
+  <div *ngIf="lobby">
+    <div class="flex-header">
+      <ion-icon [routerLink]="['/home']" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <h1 class="title">
+        Bem vindo
+      </h1>
+      <p class="nome">
+        Joaquim
+      </p>
+    </div>
+
+    <div style="margin-top: 40px;">
+      <div (click)="openDados()" class="container-lobby">
+        <ion-icon class="icon-cta" name="reader-outline"></ion-icon>
+        <p class="nome-cta">
+          Meus Dados
+        </p>
+      </div>
+
+      <div (click)="openConfig()" class="container-lobby">
+        <ion-icon class="icon-cta" name="options-outline"></ion-icon>
+        <p class="nome-cta">
+          Configurações
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DADOS -->
+
+  <div *ngIf="dados">
+    <div class="flex-header">
+      <ion-icon (click)="openLobby()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div class="label">
+      <p>
+        Nome do Usuário
+      </p>
+      <ion-input placeholder="Meu Nome"></ion-input>
+    </div>
+    <div class="label">
+      <p>
+        E-mail
+      </p>
+      <ion-input placeholder="email@email.com"></ion-input>
+    </div>
+    <div class="label">
+      <p>
+        Senha
+      </p>
+      <ion-input type="password" placeholder="********"></ion-input>
+    </div>
+    <div class="label">
+      <p>
+        Endereço
+      </p>
+      <ion-input placeholder="Lorem Ipsum, n° 00"></ion-input>
+    </div>
+    <p style="margin-top: 30px;" class="label">
+      Foto de Perfil
+    </p>
+    <div class="flex">
+      <img class="perfil" src="../../assets/perfil.jpg" alt="">
+      <div class="container flex-center">
+        <div>
+          <ion-icon class="icon-up" name="cloud-upload-outline"></ion-icon>
+        </div>
+        <div class="up-name">
+          Fazer upload
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div class="cta-editar flex-center">
+        <ion-icon class="icon-up" name="checkmark-circle-outline"></ion-icon>
+        <p class="up-name">
+          Editar Dados
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIG -->
+
+  <div *ngIf="config">
+    <div class="flex-header">
+      <ion-icon (click)="openLobby()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+
+    <h1 class="title-config">
+      Configurações do App
+    </h1>
+    <div class="container-config">
+      <div class="flex-config">
+        <ion-toggle></ion-toggle>
+        <p class="name-config">
+          Lorem ipsum dolor sit amet
+        </p>
+      </div>
+
+      <div class="flex-config">
+        <ion-toggle></ion-toggle>
+        <p class="name-config">
+          Consectetur adipisicing elit.
+        </p>
+      </div>
+
+      <div class="flex-config">
+        <ion-toggle></ion-toggle>
+        <p class="name-config">
+          Eius debitis odio sequi cum
+        </p>
+      </div>
+
+      <div class="flex-config">
+        <ion-toggle></ion-toggle>
+        <p class="name-config">
+          Quisquam obcaecati tenetur
+        </p>
+      </div>
+    </div>
+  </div>
+</ion-content>

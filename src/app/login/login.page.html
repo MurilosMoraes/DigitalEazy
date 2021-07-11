@@ -1,0 +1,45 @@
+<ion-content>
+  <div class="overlay">
+    <div class="container">
+      <h1 class="title">
+        Login
+      </h1>
+      <p class="sub">
+        Digite seu CPF e sua senha para logar em sua conta Digital Eazy
+      </p>
+      <div style="margin-top: 40px;">
+        <p class="label">
+          CPF
+        </p>
+        <ion-input type="number">
+        </ion-input>
+      </div>
+
+      <div>
+        <p class="label">
+          Senha
+        </p>
+        <ion-input type="password">
+        </ion-input>
+      </div>
+
+
+    </div>
+
+    <div class="bottom">
+      <div  [routerLink]="['/home']" class="cta-branco-width">
+        <div>
+          Avançar
+        </div>
+        <div>
+          <ion-icon style="margin-left: 5px; font-size: 12px;" name="arrow-forward-outline"></ion-icon>
+        </div>
+      </div>
+
+    </div>
+    <div  [routerLink]="['/cadastro']" class="cadastre-se">
+      Cadastre-se
+    </div>
+  </div>
+
+</ion-content>

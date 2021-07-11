@@ -1,0 +1,86 @@
+<ion-content>
+  <div *ngIf="dados">
+    <div class="flex-header">
+      <ion-icon [routerLink]="['/home']" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <h1 class="title">
+        Gere seu boleto para depósito
+      </h1>
+    </div>
+
+    <div>
+      <ion-item>
+        <ion-label position="stacked">Digite o valor para depósito</ion-label>
+        <ion-input>
+          <ion-icon name="logo-usd"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Escolha o vencimento do seu boleto</ion-label>
+        <ion-input>
+          <ion-icon name="calendar"></ion-icon>
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">CPF do Pagador</ion-label>
+        <ion-input>
+          <ion-icon name="id-card"></ion-icon>
+        </ion-input>
+      </ion-item>
+    </div>
+
+    <div class="bottom">
+      <div class="cta-dados" (click)="openGerado()">
+        <p>
+          Gerar Boleto
+        </p>
+        <ion-icon style="margin-top: 3px; margin-left: 5px;" name="arrow-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- GERADO -->
+
+  <div *ngIf="gerado">
+    <div class="flex-header">
+      <ion-icon (click)="openDados()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <h1 class="title">
+        Copie o código ou faça download <br>
+        do seu boleto
+      </h1>
+    </div>
+
+    <div class="card-branco">
+      <h1 class="copy">
+        0000123456.789012 <br>
+        005554.44332221 <br>
+        568754450.0006745
+      </h1>
+      <div class="bottom">
+        <div class="cta-cinza">
+          <ion-icon style="margin-top: 3px; font-size: 20px; margin-right: 5px;" name="copy-outline"></ion-icon>
+          <p>
+            Copiar
+          </p>
+        </div>
+        <div style="margin-top: 10px;" class="cta-cinza">
+          <ion-icon style="font-size: 20px; margin-right: 5px;" name="download-outline"></ion-icon>
+          <p>
+            Fazer Download
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

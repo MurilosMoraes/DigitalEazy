@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ion-content {
+    --background: #232528;
+}
+
+.container {
+    position: relative;
+    margin: 0 20px;
+}
+
+.flex-header{
+    margin-right: 10px;
+    margin-left: 20px;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.arrow-left{
+    font-size: 24px;
+}
+
+.hamburger-flex {
+    margin: 20px 10px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+
+.hamburger {
+    margin: 20px 10px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+}
+
+ion-input {
+    border-bottom: 2px solid #ffffff;
+    width: 90%;
+    margin-left: 5%;
+    padding: 0 10px !important;
+    text-align: center;
+}
+
+.bottom-lobby {
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+}
+
+.icons {
+    height: 18px;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+.cta-branco {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #333333;
+    background-color: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 50px;
+    margin-left: 5%;
+}
+
+.cta-cinza {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-left: 5%;
+    color: #333333;
+    background-color: #b8b8b8;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 50px;
+}
+
+#container {
+    margin: 30px 20px 0 20px;
+}
+
+.title-infos {
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.infos {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.card-branco {
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 90vh;
+    border-radius: 20px 20px 0 0;
+}
+
+.title-comprovante {
+    padding-top: 30px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+    color: #232528;
+}
+
+.title-infos-comprovante {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.infos-comprovante {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333333;
+    font-weight: 400;
+}
+
+#container-comprovante{
+    margin: 40px 20px 0 20px;
+}
+
+.share{
+    font-size: 24px;
+    color: #ffffff;
+    margin-right: 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

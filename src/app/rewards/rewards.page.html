@@ -1,0 +1,583 @@
+<ion-content>
+  <div *ngIf="principal">
+    <div class="flex-header">
+      <ion-icon [routerLink]="['/home']" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+
+    <h1 class="title">
+      Rewards
+    </h1>
+
+    <p class="texto">
+      Com o programa Digital Eazy Rewards, você tem benefício, benefício, benefício. E tudo isso por apenas R$9,90/mês.
+    </p>
+
+    <h1 class="title-2">
+      Deseja aderir?
+    </h1>
+    <div (click)="openPositivo()" class="cta-positivo">
+      <ion-icon class="icon" name="trophy-outline"></ion-icon>
+      <p>
+        Sim, quero ganhar pontos!
+      </p>
+    </div>
+    <div (click)="openNegativo()" *ngIf="principal" class="cta-negativo">
+      <ion-icon class="icon" name="thumbs-down-outline"></ion-icon>
+      <p>
+        No momento não
+      </p>
+    </div>
+  </div>
+
+  <!-- EM CASO DE CAMINHO NEGATIVO -->
+
+  <div *ngIf="negativo">
+    <div class="flex-header">
+      <ion-icon (click)="openPrincipal()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+
+    <h1 class="title">
+      Rewards
+    </h1>
+
+    <p class="texto">
+      Poxa... Que pena! A cada R$0 reais em compras, você ganha 0 pontos. Dá até para trocar por um lorem ipsum.
+    </p>
+
+    <h1 class="title-2">
+      Deseja aderir?
+    </h1>
+
+
+    <div (click)="openMudou()" class="cta-positivo">
+      <ion-icon class="icon" name="trophy-outline"></ion-icon>
+      <p>
+        Mudei de ideia, quero pontos!
+      </p>
+    </div>
+  </div>
+
+  <!-- EM CASO DE SELEÇÃO NEGATIVA, PORÉM MUDOU DE IDÉIA -->
+
+  <div *ngIf="mudou">
+    <div class="flex-header">
+      <ion-icon (click)="openNegativo()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+
+    <h1 class="title">
+      Rewards
+    </h1>
+
+    <p class="texto">
+      Parabéns! A cada R$0 reais em compras, você ganha 0 pontos.
+      <br>
+      <br>
+      Conheça seu espaço Rewards.
+
+    </p>
+
+    <h1 class="title-2">
+      Realizar um tour agora?
+    </h1>
+
+
+    <div class="flex">
+      <div [routerLink]="['/tour']" class="sim">
+        <p>
+          Sim
+        </p>
+      </div>
+
+      <div (click)="openHome()" class="depois">
+        <p>
+          Depois
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- EM CASO DE SELEÇÃO POSITIVA -->
+
+  <div style="margin-bottom: 20px;" *ngIf="positivo">
+    <div class="flex-header">
+      <ion-icon (click)="openPrincipal()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+
+    <h1 class="title">
+      Rewards
+    </h1>
+
+    <p class="texto">
+      Legal, estamos quase lá! <br>
+      Para completar sua adesão, selecione <br>
+      uma data de vencimento.
+    </p>
+
+    <div class="label">
+      <p>
+        Banco de Destino
+      </p>
+      <ion-select placeholder="Todo dia 10">
+        <ion-select-option value="f">option 1</ion-select-option>
+        <ion-select-option value="m">option 2</ion-select-option>
+      </ion-select>
+    </div>
+
+    <div class="bottom">
+      <div (click)="openHome()" class="cta-positivo">
+        Continuar
+      </div>
+    </div>
+  </div>
+
+  <!-- INFOS -->
+
+  <div *ngIf="infos">
+    <div class="flex-header">
+      <ion-icon [routerLink]="['/home']" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+
+    <h1 class="title">
+      Bem vindo ao seu espaço <br>
+      <span>Rewards</span>
+    </h1>
+
+    <div style="margin-top: 30px;" class="flex-itens">
+      <p>
+        Você possui:
+      </p>
+      <p style="font-weight: 700;">
+        0 pontos
+      </p>
+    </div>
+
+    <div>
+      <h1 class="title-section">
+        Contagem de pontos
+      </h1>
+      <div class="flex-itens">
+        <p>
+          Acessar o app
+        </p>
+        <p style="font-weight: 700;">
+          00 pontos
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Transferências
+        </p>
+        <p style="font-weight: 700;">
+          00 pontos
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Vendas Online
+        </p>
+        <p style="font-weight: 700;">
+          00 pontos
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Indicar amigos
+        </p>
+        <p style="font-weight: 700;">
+          00 pontos
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Lorem Ipsum
+        </p>
+        <p style="font-weight: 700;">
+          00 pontos
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Lorem Ipsum
+        </p>
+        <p style="font-weight: 700;">
+          00 pontos
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Lorem Ipsum
+        </p>
+        <p style="font-weight: 700;">
+          00 pontos
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Lorem Ipsum
+        </p>
+        <p style="font-weight: 700;">
+          00 pontos
+        </p>
+      </div>
+    </div>
+
+
+    <div>
+      <h1 class="title-section">
+        Porcentagem do cashback
+      </h1>
+      <div class="flex-itens">
+        <p>
+          Pagamentos de Contas
+        </p>
+        <p style="font-weight: 700;">
+          0,0%
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Recargas
+        </p>
+        <p style="font-weight: 700;">
+          0,0%
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          TED
+        </p>
+        <p style="font-weight: 700;">
+          0,0%
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Uso do Cartão
+        </p>
+        <p style="font-weight: 700;">
+          0,0%
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Lorem Ipsum
+        </p>
+        <p style="font-weight: 700;">
+          0,0%
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Lorem Ipsum
+        </p>
+        <p style="font-weight: 700;">
+          0,0%
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Lorem Ipsum
+        </p>
+        <p style="font-weight: 700;">
+          0,0%
+        </p>
+      </div>
+      <div class="flex-itens">
+        <p>
+          Lorem Ipsum
+        </p>
+        <p style="font-weight: 700;">
+          0,0%
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOME -->
+
+  <div *ngIf="home">
+    <div class="flex-header">
+      <ion-icon [routerLink]="['/home']" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+
+    <h1 class="title">
+      Bem vindo ao seu espaço <br>
+      <span>Rewards</span>
+    </h1>
+
+    <div style="margin-top: 30px;" class="flex-itens">
+      <p>
+        Você possui:
+      </p>
+      <p style="font-weight: 700;">
+        0 pontos
+      </p>
+    </div>
+
+    <h1 style="margin-top: 40px;" class="title">
+      Trocar pontos
+    </h1>
+
+
+    <div (click)="openParceiros()" style="margin-top: 40px;" class="btn-rewards">
+      <img src="../../assets/icones/discount-icon.svg" alt="">
+      <p style="margin-top: 5px;">
+        Serviços Parceiros
+      </p>
+    </div>
+
+    <div (click)="openDigitalEazy()" class="btn-rewards">
+      <img src="../../assets/icones/wallet-icon.svg" alt="">
+      <p style="margin-top: 5px;">
+        Serviços Digital Eazy
+      </p>
+    </div>
+
+
+    <h1 style="margin: 40px 20px;" class="title">
+      Histórico de Pontos e Cashback
+    </h1>
+
+
+    <div class="cards">
+
+      <!-- BOTÃO ATIVO PADRÃO -->
+
+      <div class="btn-ativo">
+        <div class="flex-start">
+          <div>
+            <img src="../../assets/icones/transfer-illustration.svg" alt="">
+          </div>
+          <div class="infos-card">
+            <p>
+              Transferência
+            </p>
+            <p class="data">
+              05/01/2020 às 14:37
+            </p>
+          </div>
+        </div>
+        <div class="pontos">
+          00 pontos
+        </div>
+      </div>
+
+      <div class="btn-ativo">
+        <div class="flex-start">
+          <div>
+            <img src="../../assets/icones/share-illustration.svg" alt="">
+          </div>
+          <div class="infos-card">
+            <p>
+              Indicar Amigos
+            </p>
+            <p class="data">
+              05/01/2020 às 14:37
+            </p>
+          </div>
+        </div>
+        <div class="pontos">
+          00 pontos
+        </div>
+      </div>
+
+      <div class="btn-ativo">
+        <div class="flex-start">
+          <div>
+            <img src="../../assets/icones/cashback-illustration.svg" alt="">
+          </div>
+          <div class="infos-card">
+            <p>
+              Cashback
+            </p>
+            <p class="data">
+              05/01/2020 às 14:37
+            </p>
+          </div>
+        </div>
+        <div class="pontos">
+          0,00
+        </div>
+      </div>
+
+      <!-- BOTÃO COM LINE THROUGH -->
+
+      <div class="btn-riscado">
+        <div class="flex-start">
+          <div>
+            <img src="../../assets/icones/transfer-illustration.svg" alt="">
+          </div>
+          <div class="infos-card">
+            <p>
+              Transferência
+            </p>
+            <p class="data">
+              05/01/2020 às 14:37
+            </p>
+          </div>
+        </div>
+        <div class="pontos">
+          00 pontos
+        </div>
+      </div>
+
+      <div class="btn-ativo">
+        <div class="flex-start">
+          <div>
+            <img src="../../assets/icones/ted-illustration.svg" alt="">
+          </div>
+          <div class="infos-card">
+            <p>
+              TED
+            </p>
+            <p class="data">
+              05/01/2020 às 14:37
+            </p>
+          </div>
+        </div>
+        <div class="pontos">
+          00 pontos
+        </div>
+      </div>
+
+      <!-- BOTÃO COM OPACIDADE -->
+
+      <div class="btn-opacidade">
+        <div class="flex-start">
+          <div>
+            <img src="../../assets/icones/share-illustration.svg" alt="">
+          </div>
+          <div class="infos-card">
+            <p>
+              Indicar Amigos
+            </p>
+            <p class="data">
+              05/01/2020 às 14:37
+            </p>
+          </div>
+        </div>
+        <div class="pontos">
+          00 pontos
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVIÇOS PARCEIROS -->
+
+  <div *ngIf="parceiros">
+    <div class="flex-header">
+      <ion-icon (click)="openHome()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+
+    <div style="margin-top: 30px;" class="flex-itens">
+      <p>
+        Você possui:
+      </p>
+      <p>
+        0 pontos
+      </p>
+    </div>
+
+    <h1 style="margin-top: 40px;" class="title">
+      Serviços Parceiros
+    </h1>
+
+    <div style="margin-top: 60px;" class="flex-eazy">
+      <div class="btns-eazy">
+        <div><img src="../../assets/icones/id-icon.svg" alt=""></div>
+        <div class="title-options">Lorem ipsum</div>
+      </div>
+      <div class="btns-eazy">
+        <div><img src="../../assets/icones/id-icon.svg" alt=""></div>
+        <div class="title-options">Lorem ipsum</div>
+      </div>
+    </div>
+
+    <div class="flex-eazy">
+      <div class="btns-eazy">
+        <div><img src="../../assets/icones/id-icon.svg" alt=""></div>
+        <div class="title-options">Lorem ipsum</div>
+      </div>
+      <div class="btns-eazy">
+        <div><img src="../../assets/icones/id-icon.svg" alt=""></div>
+        <div class="title-options">Lorem ipsum</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVIÇOS DIGITAL EAZY -->
+
+  <div *ngIf="digitalEazy">
+    <div class="flex-header">
+      <ion-icon (click)="openHome()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+
+    <div style="margin-top: 30px;" class="flex-itens">
+      <p>
+        Você possui:
+      </p>
+      <p>
+        0 pontos
+      </p>
+    </div>
+
+    <h1 style="margin-top: 40px;" class="title">
+      Serviços Digital Eazy
+    </h1>
+
+    <div style="margin-top: 60px;" class="flex-eazy">
+      <div class="btns-eazy">
+        <div><img src="../../assets/icones/id-icon.svg" alt=""></div>
+        <div class="title-options">Lorem ipsum</div>
+      </div>
+      <div class="btns-eazy">
+        <div><img src="../../assets/icones/id-icon.svg" alt=""></div>
+        <div class="title-options">Lorem ipsum</div>
+      </div>
+    </div>
+
+    <div class="flex-eazy">
+      <div class="btns-eazy">
+        <div><img src="../../assets/icones/id-icon.svg" alt=""></div>
+        <div class="title-options">Lorem ipsum</div>
+      </div>
+      <div class="btns-eazy">
+        <div><img src="../../assets/icones/id-icon.svg" alt=""></div>
+        <div class="title-options">Lorem ipsum</div>
+      </div>
+    </div>
+  </div>
+</ion-content>

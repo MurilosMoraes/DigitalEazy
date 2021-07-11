@@ -1,0 +1,85 @@
+<ion-app>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-content>
+
+      <ion-menu-toggle>
+        <ion-icon class="flex close" name="close-outline"></ion-icon>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <div [routerLink]="['/home']" class="flex">
+          <div class="img">
+            <img src="../assets/icones/home-icon.svg" alt="">
+          </div>
+          <ion-label class="nome">Início</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div [routerLink]="['/pagar-contas']" class="flex">
+          <div class="img">
+            <img src="../assets/icones/barcode-icon.svg" alt="">
+          </div>
+          <ion-label class="nome">Pagar Contas</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div [routerLink]="['/deposito']" class="flex">
+          <div class="img">
+            <img src="../assets/icones/cash-icon.svg" alt="">
+          </div>
+          <ion-label class="nome">Depósito</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div [routerLink]="['/recarga']" class="flex">
+          <div class="img">
+            <img src="../assets/icones/mobile-icon.svg" alt="">
+          </div>
+          <ion-label class="nome">Recarga</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div [routerLink]="['/ted']" class="flex">
+          <div class="img">
+            <img src="../assets/icones/ted-icon.svg" alt="">
+          </div>
+          <ion-label class="nome">TED</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div [routerLink]="['/transferencia-eazy']" class="flex">
+          <div class="img">
+            <img src="../assets/icones/transfereazy-icon.svg" alt="">
+          </div>
+          <ion-label class="nome">Transferência Eazy</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div [routerLink]="['/perfil']" class="flex">
+          <div class="img">
+            <ion-icon style="color: #c0c0c0;" name="person-outline"></ion-icon>
+          </div>
+          <ion-label class="nome">Perfil</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div [routerLink]="['/rewards']" class="flex">
+          <div class="img">
+            <img src="../assets/icones/award-icon.svg" alt="">
+          </div>
+          <ion-label class="nome">Rewards</ion-label>
+        </div>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <div [routerLink]="['/sair']" class="flex">
+          <div class="img">
+            <img src="../assets/icones/logout-icon.svg" alt="">
+          </div>
+          <ion-label class="nome">Sair</ion-label>
+        </div>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

@@ -1,0 +1,154 @@
+<ion-content>
+  <div *ngIf="dados">
+    <div class="flex-header">
+      <ion-icon [routerLink]="['/home']" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <h1 class="title">
+        Transferência Eazy
+      </h1>
+    </div>
+
+    <div class="container-inputs">
+
+      <div class="label">
+        <p>
+          CPF do destinatário
+        </p>
+        <ion-input placeholder="000.000.000-00">
+
+        </ion-input>
+      </div>
+
+      <div class="label">
+        <p>
+          Valor da Transferência
+        </p>
+        <ion-input placeholder="R$400,00"></ion-input>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div (click)="openConfirme()" class="cta-dados">
+        <p>
+          Transferir
+        </p>
+        <ion-icon style="margin-top: 2px; margin-left: 5px;" name="arrow-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONFIRME -->
+  <div *ngIf="confirme">
+    <div class="flex-header">
+      <ion-icon (click)="openDados()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <h1 class="title">
+        Transferência Eazy
+      </h1>
+    </div>
+
+    <div class="container-inputs">
+
+      <div class="label">
+        <p>
+          CPF do destinatário
+        </p>
+        <p class="infos">000.000.000-00</p>
+      </div>
+
+      <div class="label">
+        <p>
+          Valor da Transferência
+        </p>
+        <p class="infos">
+          R$400,00
+        </p>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <div (click)="openComprovante()" class="cta-dados">
+        <p>
+          Confirmar
+        </p>
+        <ion-icon style="margin-top: 2px; margin-left: 5px;" name="arrow-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- COMPROVANTE -->
+
+  <div *ngIf="comprovante">
+    <div class="flex">
+      <ion-buttons>
+        <ion-menu-button class="hamburger" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+      <ion-icon class="share" name="share-social"></ion-icon>
+    </div>
+
+    <div class="card-branco">
+      <p class="title-comprovante">
+        Comprovante de Transação
+      </p>
+
+      <div id="container-comprovante">
+        <div>
+          <p class="title-infos-comprovante">
+            Origem
+          </p>
+          <p class="infos-comprovante">
+            JOAQUIM DOS SANTOS
+          </p>
+        </div>
+        <div>
+          <p class="title-infos-comprovante">
+            Transferindo em
+          </p>
+          <p class="infos-comprovante">
+            15/01/2021 às 15:32
+          </p>
+        </div>
+        <div>
+          <p class="title-infos-comprovante">
+            Destinatário
+          </p>
+          <p class="infos-comprovante">
+            000.000.000-00
+          </p>
+          <p class="infos-comprovante">
+            JOÃO MARCOS BECKER
+          </p>
+        </div>
+
+        <div>
+          <p class="title-infos-comprovante">
+            Transferindo
+          </p>
+          <p class="infos-comprovante">
+            R$400,00
+          </p>
+
+          <p class="title-infos-comprovante">
+            Código de autenticação
+          </p>
+          <p class="infos-comprovante">
+            a5sf87s84sw4f5df9s
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

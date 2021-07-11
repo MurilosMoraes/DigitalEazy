@@ -1,0 +1,166 @@
+<ion-content>
+
+  <div *ngIf="codigo">
+    <div class="flex-header">
+      <ion-icon [routerLink]="['/home']" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+
+    <div>
+      <h1 class="title">
+        Digite o código do seu boleto
+      </h1>
+      <ion-input></ion-input>
+    </div>
+    <div class="bottom-lobby">
+      <div class="cta-branco" (click)="openInfos()">
+        <div>
+          <img class="icons" src="../../assets/icones/cifra.svg" alt="">
+        </div>
+        <div>
+          <p>
+            Pagar
+          </p>
+        </div>
+      </div>
+      <div class="cta-cinza">
+        <div>
+          <img class="icons" src="../../assets/icones/scanner.svg" alt="">
+        </div>
+        <div>
+          <p>
+            Escanear código de barras
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INFORMAÇÕES -->
+
+  <div *ngIf="infos">
+    <div class="flex-header">
+      <ion-icon (click)="openCodigo()" class="arrow-left" name="arrow-back-outline"></ion-icon>
+      <ion-buttons>
+        <ion-menu-button class="hamburger-flex" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+    </div>
+    <h1 class="title">
+      Detalhes do pagamento
+    </h1>
+
+    <div id="container">
+      <div>
+        <p class="title-infos">
+          Valor
+        </p>
+        <p class="infos">
+          R$299,00
+        </p>
+      </div>
+
+      <div>
+        <p class="title-infos">
+          Data do Pagamento
+        </p>
+        <p class="infos">
+          15/01/2021
+        </p>
+      </div>
+
+      <div>
+        <p class="title-infos">
+          Vencimento
+        </p>
+        <p class="infos">
+          20/01/2021
+        </p>
+      </div>
+
+      <div>
+        <p class="title-infos">
+          Favorecido
+        </p>
+        <p class="infos">
+          LOJAS RENNER S.A.
+        </p>
+      </div>
+
+      <div>
+        <p class="title-infos">
+          Banco
+        </p>
+        <p class="infos">
+          237 - BRADESCO
+        </p>
+      </div>
+    </div>
+    <div class="bottom-lobby">
+      <div class="cta-branco" (click)="openComprovante()">
+        <p>
+          Finalizar Pagamento
+        </p>
+        <ion-icon style="margin-top: 3px; margin-left: 5px;" name="arrow-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPROVANTE -->
+  <div *ngIf="comprovante">
+    <div class="flex">
+      <ion-buttons>
+        <ion-menu-button class="hamburger" menu="main-menu">
+        </ion-menu-button>
+      </ion-buttons>
+      <ion-icon class="share" name="share-social"></ion-icon>
+    </div>
+
+    <div class="card-branco">
+      <p class="title-comprovante">
+        Comprovante de Transação
+      </p>
+
+      <div id="container-comprovante">
+        <p class="title-infos-comprovante">
+          Valor
+        </p>
+        <p class="infos-comprovante">
+          R$299,00
+        </p>
+
+        <p class="title-infos-comprovante">
+          Data do Pagamento
+        </p>
+        <p class="infos-comprovante">
+          15/01/2021
+        </p>
+
+        <p class="title-infos-comprovante">
+          Vencimento
+        </p>
+        <p class="infos-comprovante">
+          20/01/2021
+        </p>
+
+        <p class="title-infos-comprovante">
+          Favorecido
+        </p>
+        <p class="infos-comprovante">
+          LOJAS RENNER S.A.
+        </p>
+
+        <p class="title-infos-comprovante">
+          Banco
+        </p>
+        <p class="infos-comprovante">
+          237 - BRADESCO
+        </p>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

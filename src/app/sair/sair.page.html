@@ -1,0 +1,60 @@
+<ion-content>
+  <ion-buttons>
+    <ion-menu-button class="hamburger" menu="main-menu">
+    </ion-menu-button>
+  </ion-buttons>
+
+  <h1 class="title">
+    Deseja realmente sair?
+  </h1>
+  <div class="container">
+    <div  [routerLink]="['/lobby']" class="cta-editar flex-center">
+      <ion-icon class="icon-up" name="exit-outline"></ion-icon>
+      <p class="up-name">
+        Sim, Sair
+      </p>
+    </div>
+    <div  [routerLink]="['/home']" class="cta-editar flex-center">
+      <ion-icon class="icon-up" name="close-circle-outline"></ion-icon>
+      <p class="up-name">
+        Não, cancelar
+      </p>
+    </div>
+  </div>
+  <div class="bottom">
+    <h1 class="title-logs">
+      Ultimos Logs
+    </h1>
+    <p class="logs">
+      04/01/2021 às 16:57
+    </p>
+    <p class="logs">
+      04/01/2021 às 15:00
+    </p>
+    <p class="logs">
+      04/01/2021 às 13:43
+    </p>
+    <p class="logs">
+      03/01/2021 às 12:10
+    </p>
+    <p class="logs">
+      03/01/2021 às 11:25
+    </p>
+    <p class="logs">
+      03/01/2021 às 11:02
+    </p>
+    <p class="logs">
+      03/01/2021 às 10:57
+    </p>
+    <p class="logs">
+      02/01/2021 às 16:57
+    </p>
+    <p class="logs">
+      02/01/2021 às 14:12
+    </p>
+    <p class="logs">
+      02/01/2021 às 09:11
+    </p>
+  </div>
+
+</ion-content>
