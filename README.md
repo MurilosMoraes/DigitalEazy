@@ -1,4 +1,4 @@
-## Aplicativo feito em Ionic, para a empresa Alemã Kiosk Go, na área de ecommerce.
+## Aplicativo feito em Ionic, para o banco Digital Eazy
 
 ### Previews: 
 <div style="display: inline_block">
